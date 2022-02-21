@@ -1,0 +1,23 @@
+@import "src/styles/variables";
+
+.dropdown-button {
+  background: $grey;
+  border-radius: $br;
+  height: 36px;
+  padding: $margin-half;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  > .content {
+    margin-right: $margin-half;
+    display: flex;
+    align-items: center;
+  }
+
+  &:hover {
+    background: lighten($grey, 5%);
+  }
+}
