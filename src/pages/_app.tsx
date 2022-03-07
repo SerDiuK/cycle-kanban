@@ -1,8 +1,8 @@
-import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
 import { store } from "../app/store";
 import Sidebar from "../features/sidebar/Sidebar";
+import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

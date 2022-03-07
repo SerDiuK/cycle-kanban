@@ -6,27 +6,71 @@
   background: $black;
   position: relative;
 
-  &.sidebar-collapsed {
+  > .toggle-activation-area {
+    position: absolute;
     width: 64px;
+    right: -32px;
+    top: 0;
+    height: 128px;
 
     > button.toggle-button {
-      transform: rotate(180deg);
+      background: $accent-blue;
+      color: white;
+      height: 24px;
+      width: 24px;
+      border-radius: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+      right: 18px;
+      top: $margin-base;
+    }
+
+    > .toggle-gradient {
+      position: absolute;
+      height: 500px;
+      width: 4px;
+      right: 28px;
+      top: 0px;
+      border-radius: 0px;
+      background: linear-gradient(
+        180deg,
+        #2e48ed 10.71%,
+        rgba(39, 64, 225, 0) 86.61%
+      );
     }
   }
 
-  > button.toggle-button {
-    background: $accent-blue;
-    color: white;
-    height: 24px;
-    width: 24px;
-    border-radius: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: absolute;
-    right: -12px;
-    top: $margin-base;
+  &.sidebar-collapsed {
+    width: 64px;
+
+    > .header {
+      flex-direction: column;
+    }
+
+    > .toggle-activation-area {
+      > button.toggle-button {
+        transform: rotate(180deg);
+      }
+    }
+
+    > .kanban-boards-menu {
+      > .kanban-boards-menu-section {
+        > .kanban-boards-menu-item {
+          padding-left: $margin-xs;
+          justify-content: center;
+
+          > .kanban-boards-menu-item-name {
+            > span {
+              margin-right: 0;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
   }
 
   .header {
@@ -56,15 +100,15 @@
     cursor: pointer;
 
     .actions-menu-item {
-      padding: $margin-half;
-      font-weight: 600;
+      padding: $margin-sm;
+      font-family: $ff-semi-bold;
       color: $text-disabled;
       display: flex;
       align-items: center;
       border-radius: $br;
 
       span {
-        margin-left: $margin-half;
+        margin-left: $margin-sm;
       }
 
       &:hover {
@@ -82,7 +126,7 @@
       .section-title {
         display: flex;
         align-items: center;
-        padding: $margin-quart;
+        padding: $margin-xs;
         border-radius: $br;
         cursor: pointer;
 
@@ -92,7 +136,7 @@
         }
 
         .section-name {
-          font-weight: 600;
+          font-family: $ff-semi-bold;
         }
 
         &:hover {
@@ -115,7 +159,7 @@
       }
 
       .kanban-boards-menu-item {
-        padding: $margin-quart;
+        padding: $margin-xs;
         display: flex;
         align-items: center;
         border-radius: $br;
@@ -124,12 +168,12 @@
         cursor: pointer;
 
         span.kanban-boards-menu-item-name > span {
-          margin-right: $margin-half;
+          margin-right: $margin-sm;
           font-size: 10px;
         }
 
         span.ellipsis-wrapper {
-          padding: $margin-quart;
+          padding: $margin-xs;
           display: flex;
           align-items: center;
           justify-content: flex-end;
@@ -145,7 +189,7 @@
         &.active {
           background: $accent-blue;
           color: white;
-          font-weight: 600;
+          font-family: $ff-semi-bold;
 
           span.ellipsis-wrapper {
             display: none;

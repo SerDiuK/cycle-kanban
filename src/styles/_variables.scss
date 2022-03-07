@@ -8,7 +8,14 @@ $text-disabled: #999999;
 
 /** Margins **/
 $margin-base: 16px;
-$margin-half: $margin-base / 2;
-$margin-quart: $margin-base / 4;
+$margin-lg: $margin-base * 2;
+$margin-sm: $margin-base / 2;
+$margin-xs: $margin-base / 4;
 
 $br: 4px;
+
+/** Font Families **/
+$ff: "InterRegular";
+$ff-medium: "InterMedium";
+$ff-semi-bold: "InterSemiBold";
+$ff-bold: "InterBold";

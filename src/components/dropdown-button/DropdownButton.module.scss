@@ -4,15 +4,28 @@
   background: $grey;
   border-radius: $br;
   height: 36px;
-  padding: $margin-half;
+  padding: $margin-sm;
   color: white;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
 
+  &.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    padding: 0;
+
+    > .content {
+      margin-right: 0;
+      margin-bottom: $margin-sm;
+    }
+  }
+
   > .content {
-    margin-right: $margin-half;
+    margin-right: $margin-sm;
     display: flex;
     align-items: center;
   }

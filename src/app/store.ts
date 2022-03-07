@@ -1,9 +1,11 @@
 import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
 import sidebarReducer from "../features/sidebar/store/sidebar.slice";
+import kanbanBoardReducer from "../features/kanban-board/store/kanban-board.slice";
 
 export const store = configureStore({
   reducer: {
     sidebar: sidebarReducer,
+    kanbanBoard: kanbanBoardReducer,
   },
 });
 

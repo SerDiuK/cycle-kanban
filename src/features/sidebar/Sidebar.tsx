@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { FaAngleLeft, FaRegCircle } from "react-icons/fa";
+import { useState } from "react";
+import { FaAngleLeft } from "react-icons/fa";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import DropdownButton from "../../components/dropdown-button/DropdownButton";
 import ActionsMenu from "./actions-menu/ActionsMenu";
@@ -11,28 +12,43 @@ const Sidebar = () => {
   const dispatch = useAppDispatch();
   const collapsed = useAppSelector(selectSidebarCollapsed);
 
+  const [showToggle, setShowToggle] = useState(false);
+
   const collapsedClass = collapsed ? styles["sidebar-collapsed"] : "";
 
   return (
     <div className={`${styles.sidebar} ${collapsedClass}`}>
-      <button
-        className={styles["toggle-button"]}
-        onClick={() => dispatch(toggleSidebar())}
+      <div
+        className={styles["toggle-activation-area"]}
+        onMouseEnter={() => setShowToggle(true)}
+        onMouseLeave={() => setShowToggle(false)}
       >
-        <FaAngleLeft></FaAngleLeft>
-      </button>
+        {showToggle && (
+          <>
+            <div className={styles["toggle-gradient"]}></div>
+            <button
+              className={styles["toggle-button"]}
+              onClick={() => dispatch(toggleSidebar())}
+            >
+              <FaAngleLeft></FaAngleLeft>
+            </button>
+          </>
+        )}
+      </div>
 
       <div className={styles.header}>
-        <DropdownButton>
+        <DropdownButton square={collapsed}>
           <Image alt="" src="/assets/logo.svg" height={20} width={20} />
-          <span
-            style={{ marginLeft: "8px", fontSize: "15px", fontWeight: 500 }}
-          >
-            Cycle
-          </span>
+          {collapsed || (
+            <span
+              style={{ marginLeft: "8px", fontSize: "15px", fontWeight: 500 }}
+            >
+              Cycle
+            </span>
+          )}
         </DropdownButton>
 
-        <DropdownButton>
+        <DropdownButton square={collapsed}>
           <div className={styles["avatar-wrapper"]}>
             <Image src="/assets/profile.jpeg" alt="" width={20} height={20} />
           </div>

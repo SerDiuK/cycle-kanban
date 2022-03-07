@@ -1,3 +1,4 @@
+import { useEffect, useMemo } from "react";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import { KanbanBoardsSection } from "../interfaces/kanban-board-section.interface";
 import styles from "../Sidebar.module.scss";
@@ -37,7 +38,9 @@ const KanbanBoardsMenu = () => {
   const dispatch = useAppDispatch();
   const sections = useAppSelector(selectKanbanBoardSections);
 
-  dispatch(loadSections(newSections));
+  useEffect(() => {
+    dispatch(loadSections());
+  }, []);
 
   return (
     <div className={styles["kanban-boards-menu"]}>

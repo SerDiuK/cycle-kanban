@@ -1,0 +1,168 @@
+{
+  "sections": [
+    {
+      "id": 1,
+      "name": "Starred",
+      "expanded": true,
+      "items": [
+        {
+          "id": 1,
+          "text": "Feedback 2.0",
+          "icon": "🦊",
+          "active": false
+        },
+        {
+          "id": 2,
+          "text": "Roadmap Tech",
+          "icon": "🏆",
+          "active": false
+        },
+        {
+          "id": 3,
+          "text": "Design",
+          "icon": "🎨",
+          "active": true
+        },
+        {
+          "id": 4,
+          "text": "Github Feedback",
+          "icon": "🤖",
+          "active": false
+        },
+        {
+          "id": 5,
+          "text": "Improvements",
+          "icon": "⚛️",
+          "active": false
+        },
+        {
+          "id": 6,
+          "text": "Bugs",
+          "icon": "🚀",
+          "active": false
+        },
+        {
+          "id": 7,
+          "text": "Sprint 4",
+          "icon": "⌛️",
+          "active": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Run planning",
+      "expanded": false,
+      "items": []
+    },
+    {
+      "id": 3,
+      "name": "Boards",
+      "expanded": false,
+      "items": []
+    }
+  ],
+  "active-board": {
+    "name": "Design",
+    "icon": "🎨",
+    "columns": [
+      {
+        "id": 1,
+        "collapsed": false,
+        "name": "📐 Framing",
+        "cards": [
+          {
+            "id:": 1,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec leo blandit, malesuada arcu scelerisque, fermentum lectus. Nulla ac accumsan erat.",
+            "tags": []
+          },
+          {
+            "id:": 2,
+            "description": "Aliquam eget felis vulputate, pharetra ex vitae.",
+            "tags": []
+          },
+          {
+            "id:": 3,
+            "description": "Phasellus id ipsum in massa commodo aliquam vel in lectus.",
+            "tags": []
+          },
+          {
+            "id": 4,
+            "description": "Suspendisse dapibus metus aliquet lectus ultrices placerat.",
+            "tags": []
+          },
+          {
+            "id": 5,
+            "description": "Aliquam elementum arcu velit, ac consequat arcu lobortis sed. Integer non cursus leo, et euismod felis.",
+            "tags": []
+          },
+          {
+            "id": 6,
+            "description": "Nam semper eleifend diam. .",
+            "tags": []
+          },
+          {
+            "id": 7,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec leo blandit, malesuada arcu scelerisque, fermentum lectus.",
+            "tags": []
+          },
+          {
+            "id": 8,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec leo blandit, malesuada arcu scelerisque, fermentum lectus.",
+            "tags": []
+          },
+          {
+            "id": 9,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec leo blandit, malesuada arcu scelerisque, fermentum lectus.",
+            "tags": []
+          },
+          {
+            "id": 10,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec leo blandit, malesuada arcu scelerisque, fermentum lectus.",
+            "tags": []
+          }
+        ]
+      },
+      {
+        "name": "🎨 In Design",
+        "cards": [
+          {
+            "id:": 1,
+            "description": "Aliquam eget felis vulputate, pharetra ex vitae.",
+            "tags": []
+          },
+          {
+            "id:": 2,
+            "description": "Restibulum pharetra ligula sed dapibus commodo. Aliquam pulvinar posuere condimentum.",
+            "tags": []
+          },
+          {
+            "id:": 3,
+            "description": "Vestibulum sed massa mollis sem interdum rutrum.",
+            "tags": []
+          }
+        ],
+        "collapsed": false,
+        "id": 2
+      },
+      {
+        "name": "✏️ In Review",
+        "cards": [
+          {
+            "id:": 1,
+            "description": "Phasellus id ipsum in massa commodo aliquam vel in lectus.",
+            "tags": []
+          }
+        ],
+        "collapsed": false,
+        "id": 3
+      },
+      {
+        "name": "⏰ Backlog",
+        "cards": [],
+        "collapsed": true,
+        "id": 4
+      }
+    ]
+  }
+}
